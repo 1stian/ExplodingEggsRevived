@@ -1,0 +1,8 @@
+ExplodingEggs:
+  Explosion:
+    Enabled-By-Default: false
+    Explosion-radius: 2
+    Random-Explode: false
+    Chance-For-Explosion: 40
+  Damage:
+    Disable-Block-Damage: false

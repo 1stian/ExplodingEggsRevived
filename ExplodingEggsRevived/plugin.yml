@@ -1,0 +1,11 @@
+name: ExplodingEggs
+main: pro.homiecraft.ExplodingEggs
+version: 1.0
+author: GudfareN
+website: homiecraft.pro
+
+commands:
+   ee:
+      description: Toggle explosion.
+      permission: ExplodingEggs.ee
+      usage: /ee
