@@ -1,5 +1,8 @@
 package pro.homiecraft;
 
+import java.io.IOException;
+import java.util.logging.Logger;
+
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -7,6 +10,7 @@ import pro.homiecraft.Commands.ee;
 
 public class ExplodingEggs extends JavaPlugin {
 	public static ExplodingEggs pluginST;
+	public Logger log = Logger.getLogger("Minecraft");
 
 	public void onEnable() {
 		PluginManager pm = getServer().getPluginManager();
@@ -19,6 +23,8 @@ public class ExplodingEggs extends JavaPlugin {
 		
 		getCommands(this);
 		
+		initMetrics();
+		
 		this.getConfig().options().copyDefaults(true);
 		this.saveConfig();
 		this.reloadConfig();
@@ -26,5 +32,15 @@ public class ExplodingEggs extends JavaPlugin {
 	
 	public void getCommands(ExplodingEggs ExplodingEggs){
 		this.getCommand("ee").setExecutor(new ee());
+	}
+	
+	public void initMetrics(){
+		try {
+		    Metrics metrics = new Metrics(this);
+		    metrics.start();
+		} catch (IOException e) {
+		    // Failed to submit the stats :-(
+			log.info("Metrics RealEstate " + e);
+		}
 	}
 }
