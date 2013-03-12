@@ -6,3 +6,6 @@ ExplodingEggs:
     Chance-For-Explosion: 40
   Damage:
     Disable-Block-Damage: false
+  DisabledWorlds:
+    - DisabledWorld1
+    - DisabledWorld2
