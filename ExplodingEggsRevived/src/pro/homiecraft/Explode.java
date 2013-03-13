@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.bukkit.entity.Egg;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerEggThrowEvent;
 
@@ -11,7 +12,7 @@ import pro.homiecraft.Commands.resources.toggleMap;
 
 public class Explode implements Listener {
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGH)
 	public void ex(PlayerEggThrowEvent event) {
 		//Player player = event.getPlayer();
 		Egg egg = event.getEgg();

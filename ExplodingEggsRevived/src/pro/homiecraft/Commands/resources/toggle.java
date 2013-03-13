@@ -7,7 +7,7 @@ public class toggle {
 	public static void togglePluginState(Player player) {
 		if (toggleMap.ee.containsKey(player)) {
 			if (toggleMap.ee.get(player)) {
-				toggleMap.ee.put(player, false);
+				toggleMap.ee.remove(player);
 				player.sendMessage(ChatColor.AQUA + "Egg explosion disabled");
 			} else {
 				toggleMap.ee.put(player, true);
