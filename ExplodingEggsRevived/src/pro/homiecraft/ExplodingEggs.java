@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import pro.homiecraft.Commands.Reload;
 import pro.homiecraft.Commands.ee;
 
 public class ExplodingEggs extends JavaPlugin {
@@ -14,7 +15,7 @@ public class ExplodingEggs extends JavaPlugin {
 
 	public void onEnable() {
 		PluginManager pm = getServer().getPluginManager();
-		pm.registerEvents(new Egg(), this);
+		//pm.registerEvents(new Egg(), this);
 		pm.registerEvents(new Explode(), this);
 		pm.registerEvents(new PlayerJoin(), this);
 		pm.registerEvents(new PlayerLeave(), this);
@@ -33,6 +34,7 @@ public class ExplodingEggs extends JavaPlugin {
 	
 	public void getCommands(ExplodingEggs ExplodingEggs){
 		this.getCommand("ee").setExecutor(new ee());
+		this.getCommand("explodingeggs").setExecutor(new Reload());
 	}
 	
 	public void initMetrics(){
@@ -41,7 +43,6 @@ public class ExplodingEggs extends JavaPlugin {
 		    metrics.start();
 		} catch (IOException e) {
 		    // Failed to submit the stats :-(
-			log.info("Metrics RealEstate " + e);
 		}
 	}
 }

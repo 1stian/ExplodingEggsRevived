@@ -14,7 +14,6 @@ public class Explode implements Listener {
 	
 	@EventHandler(priority = EventPriority.HIGH)
 	public void ex(PlayerEggThrowEvent event) {
-		//Player player = event.getPlayer();
 		Egg egg = event.getEgg();
 		
 		boolean randomEx = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Random-Explode", false);
@@ -29,7 +28,7 @@ public class Explode implements Listener {
 				if (toggleMap.ee.containsKey(event.getPlayer())){
 					if (toggleMap.ee.containsValue(true)){
 						event.getEgg().remove();
-						event.setHatching(true);
+						event.setHatching(false);
 						
 						if (blockDmg == false){
 							egg.getWorld().createExplosion(egg.getLocation(), exRad, false);
@@ -45,7 +44,7 @@ public class Explode implements Listener {
 			if (toggleMap.ee.containsKey(event.getPlayer())){
 				if (toggleMap.ee.containsValue(true)){
 					event.getEgg().remove();
-					event.setHatching(true);
+					event.setHatching(false);
 					
 					if (blockDmg == false){
 						egg.getWorld().createExplosion(egg.getLocation(), exRad, false);

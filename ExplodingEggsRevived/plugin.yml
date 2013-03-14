@@ -1,6 +1,6 @@
 name: ExplodingEggs
 main: pro.homiecraft.ExplodingEggs
-version: 2.1.1
+version: 2.1.2
 author: GudfareN
 website: homiecraft.pro
 
@@ -9,3 +9,7 @@ commands:
       description: Toggle explosion.
       permission: ExplodingEggs.ee
       usage: /ee
+   explodingeggs:
+      description: ExplodingEggs admin commands.
+      permission: ExplodingEggs.admin
+      usage: /explodingeggs

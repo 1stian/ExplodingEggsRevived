@@ -8,15 +8,15 @@ public class toggle {
 		if (toggleMap.ee.containsKey(player)) {
 			if (toggleMap.ee.get(player)) {
 				toggleMap.ee.remove(player);
-				player.sendMessage(ChatColor.AQUA + "Egg explosion disabled");
+				player.sendMessage(ChatColor.AQUA + "Egg explosion " + ChatColor.DARK_RED + "disabled");
 			} else {
 				toggleMap.ee.put(player, true);
-				player.sendMessage(ChatColor.AQUA + "Egg explosion enabled");
+				player.sendMessage(ChatColor.AQUA + "Egg explosion " + ChatColor.DARK_RED + "enabled");
 
 			}
 		} else {
 			toggleMap.ee.put(player, true);
-			player.sendMessage(ChatColor.AQUA + "Egg explosion enabled");
+			player.sendMessage(ChatColor.AQUA + "Egg explosion " + ChatColor.DARK_RED + "enabled");
 		}
 
 	}
