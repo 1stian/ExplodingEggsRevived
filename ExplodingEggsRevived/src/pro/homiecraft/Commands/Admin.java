@@ -9,7 +9,7 @@ import pro.homiecraft.ExplodingEggs;
 
 
 
-public class Reload implements CommandExecutor {
+public class Admin implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {		
 		if(sender.hasPermission("ExplodingEggs.admin")){
 			if(cmd.getName().equalsIgnoreCase("explodingeggs")){
@@ -21,6 +21,19 @@ public class Reload implements CommandExecutor {
 					if(args[0].equalsIgnoreCase("reload")){
 						ExplodingEggs.pluginST.reloadConfig();
 						sender.sendMessage(ChatColor.AQUA + "ExplodingEggs config has been " + ChatColor.DARK_RED + "reloaded!");
+					}
+					
+					if(args[0].equalsIgnoreCase("config")){
+						if (args.length == 1){
+							if (args[2].equalsIgnoreCase("random")){
+								if (args.length == 2){
+									
+								}else{
+									sender.sendMessage("ExplodingEggs Usage:");
+									sender.sendMessage("/explodingeggs config random true|false");
+								}
+							}
+						}
 					}
 				}
 			}

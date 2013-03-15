@@ -6,7 +6,8 @@ import java.util.logging.Logger;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import pro.homiecraft.Commands.Reload;
+import pro.homiecraft.Metrics.Graph;
+import pro.homiecraft.Commands.Admin;
 import pro.homiecraft.Commands.ee;
 
 public class ExplodingEggs extends JavaPlugin {
@@ -34,12 +35,95 @@ public class ExplodingEggs extends JavaPlugin {
 	
 	public void getCommands(ExplodingEggs ExplodingEggs){
 		this.getCommand("ee").setExecutor(new ee());
-		this.getCommand("explodingeggs").setExecutor(new Reload());
+		this.getCommand("explodingeggs").setExecutor(new Admin());
 	}
 	
 	public void initMetrics(){
 		try {
 		    Metrics metrics = new Metrics(this);
+		    
+		    Graph randomGraph = metrics.createGraph("Random Explode");
+		    Graph enabledGraph = metrics.createGraph("Enabled by Default");
+		    Graph blockDMG = metrics.createGraph("Block DMG");
+		    
+		    randomGraph.addPlotter(new Metrics.Plotter("Enabled") {
+				
+				@Override
+				public int getValue() {
+					int i = 0;
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Random-Explode");
+					if (stat == true){
+						i++;
+					}
+					return i;
+				}
+			});
+		    
+		    randomGraph.addPlotter(new Metrics.Plotter("Disabled") {
+				
+				@Override
+				public int getValue() {
+					int i = 0;
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Random-Explode");
+					if (stat == false){
+						i++;
+					}
+					return i;
+				}
+			});
+		    
+		    enabledGraph.addPlotter(new Metrics.Plotter("Enabled") {
+				
+				@Override
+				public int getValue() {
+					int i = 0;
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Enabled-By-Default");
+					if (stat == true){
+						i++;
+					}
+					return i;
+				}
+			});
+		    
+		    enabledGraph.addPlotter(new Metrics.Plotter("Disabled") {
+				
+				@Override
+				public int getValue() {
+					int i = 0;
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Enabled-By-Default");
+					if (stat == false){
+						i++;
+					}
+					return i;
+				}
+			});
+		    
+		    blockDMG.addPlotter(new Metrics.Plotter("Enabled") {
+				
+				@Override
+				public int getValue() {
+					int i = 0;
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Disable-Block-Damage");
+					if (stat == true){
+						i++;
+					}
+					return i;
+				}
+			});
+		    
+		    blockDMG.addPlotter(new Metrics.Plotter("Disabled") {
+				
+				@Override
+				public int getValue() {
+					int i = 0;
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Disable-Block-Damage");
+					if (stat == false){
+						i++;
+					}
+					return i;
+				}
+			});
+		    
 		    metrics.start();
 		} catch (IOException e) {
 		    // Failed to submit the stats :-(
