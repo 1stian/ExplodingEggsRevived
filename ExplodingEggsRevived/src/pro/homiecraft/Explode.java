@@ -12,7 +12,7 @@ import pro.homiecraft.Commands.resources.toggleMap;
 
 public class Explode implements Listener {
 	
-	@EventHandler(priority = EventPriority.HIGH)
+	@EventHandler(priority = EventPriority.NORMAL)
 	public void ex(PlayerEggThrowEvent event) {
 		Egg egg = event.getEgg();
 		
