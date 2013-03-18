@@ -25,6 +25,7 @@ public class ExplodingEggs extends JavaPlugin {
 		ExplodingEggs.pluginST = this;
 		
 		getCommands(this);
+		configSetup();
 		
 		initMetrics();
 		
@@ -36,6 +37,12 @@ public class ExplodingEggs extends JavaPlugin {
 	public void getCommands(ExplodingEggs ExplodingEggs){
 		this.getCommand("ee").setExecutor(new ee());
 		this.getCommand("explodingeggs").setExecutor(new Admin());
+	}
+	
+	public void configSetup(){
+		if (this.getConfig().contains("ExplodingEggs.Damage.Disable-Block-Damage")){
+			this.getConfig().set("ExplodingEggs.Damage.Disable-Block-Damage", "Do not use this one. Use 'Block-Damage'. You can remove this setting from the config!");
+		}
 	}
 	
 	public void initMetrics(){
@@ -103,8 +110,8 @@ public class ExplodingEggs extends JavaPlugin {
 				@Override
 				public int getValue() {
 					int i = 0;
-					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Disable-Block-Damage");
-					if (stat == true){
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Block-Damage");
+					if (stat == false){
 						i++;
 					}
 					return i;
@@ -116,8 +123,8 @@ public class ExplodingEggs extends JavaPlugin {
 				@Override
 				public int getValue() {
 					int i = 0;
-					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Disable-Block-Damage");
-					if (stat == false){
+					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Block-Damage");
+					if (stat == true){
 						i++;
 					}
 					return i;

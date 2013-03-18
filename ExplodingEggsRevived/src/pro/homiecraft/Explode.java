@@ -17,7 +17,7 @@ public class Explode implements Listener {
 		Egg egg = event.getEgg();
 		
 		boolean randomEx = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Random-Explode", false);
-		boolean blockDmg = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Disable-Block-Damage", false);
+		boolean blockDmg = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Block-Damage", true);
 		int exRad = ExplodingEggs.pluginST.getConfig().getInt("ExplodingEggs.Explosion.Explosion-radius", 2);
 		int chance = ExplodingEggs.pluginST.getConfig().getInt("ExplodingEggs.Explosion.Chance-For-Explosion", 40);
 		
@@ -27,13 +27,11 @@ public class Explode implements Listener {
 			if (r < chance){
 				if (toggleMap.ee.containsKey(event.getPlayer())){
 					if (toggleMap.ee.containsValue(true)){
-						event.getEgg().remove();
-						event.setHatching(false);
 						
-						if (blockDmg == false){
+						if (blockDmg == true){
 							egg.getWorld().createExplosion(egg.getLocation(), exRad, false);
 						}
-						else if (blockDmg == true){
+						else if (blockDmg == false){
 							egg.getWorld().createExplosion(egg.getLocation().getX(), egg.getLocation().getY(), egg.getLocation().getZ(), exRad, false, false);
 						}
 					}
@@ -43,13 +41,11 @@ public class Explode implements Listener {
 		else if(randomEx == false){
 			if (toggleMap.ee.containsKey(event.getPlayer())){
 				if (toggleMap.ee.containsValue(true)){
-					event.getEgg().remove();
-					event.setHatching(false);
 					
-					if (blockDmg == false){
+					if (blockDmg == true){
 						egg.getWorld().createExplosion(egg.getLocation(), exRad, false);
 					}
-					else if (blockDmg == true){
+					else if (blockDmg == false){
 						egg.getWorld().createExplosion(egg.getLocation().getX(), egg.getLocation().getY(), egg.getLocation().getZ(), exRad, false, false);
 					}
 				}
