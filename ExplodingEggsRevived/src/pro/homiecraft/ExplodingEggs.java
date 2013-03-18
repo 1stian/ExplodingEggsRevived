@@ -19,7 +19,7 @@ public class ExplodingEggs extends JavaPlugin {
 		//pm.registerEvents(new Egg(), this);
 		pm.registerEvents(new Explode(), this);
 		pm.registerEvents(new PlayerJoin(), this);
-		pm.registerEvents(new PlayerLeave(), this);
+		//pm.registerEvents(new PlayerLeave(), this);
 		pm.registerEvents(new WorldChange(), this);
 		
 		ExplodingEggs.pluginST = this;
@@ -111,7 +111,7 @@ public class ExplodingEggs extends JavaPlugin {
 				public int getValue() {
 					int i = 0;
 					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Block-Damage");
-					if (stat == false){
+					if (stat == true){
 						i++;
 					}
 					return i;
@@ -124,7 +124,7 @@ public class ExplodingEggs extends JavaPlugin {
 				public int getValue() {
 					int i = 0;
 					boolean stat = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Damage.Block-Damage");
-					if (stat == true){
+					if (stat == false){
 						i++;
 					}
 					return i;

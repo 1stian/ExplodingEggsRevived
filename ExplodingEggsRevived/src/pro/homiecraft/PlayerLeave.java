@@ -11,10 +11,10 @@ public class PlayerLeave implements Listener {
 	@EventHandler
 	public void onPlayerLeave(PlayerQuitEvent event){
 		Player player = event.getPlayer();
-		if (toggleMap.ee.containsKey(player)) {
-			if (toggleMap.ee.get(player)) {
-				toggleMap.ee.remove(player);
-			}
+		try{
+			toggleMap.ee.remove(player.getName());
+		}catch(Exception e){
+			
 		}
 	}
 }

@@ -5,7 +5,7 @@ ExplodingEggs:
     Random-Explode: false
     Chance-For-Explosion: 40
   Damage:
-    Block-Damage: true
+    Block-Damage: false
   DisabledWorlds:
     - DisabledWorld1
     - DisabledWorld2
