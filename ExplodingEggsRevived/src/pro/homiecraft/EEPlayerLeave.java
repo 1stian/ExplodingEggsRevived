@@ -6,9 +6,9 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import pro.homiecraft.Commands.resources.toggleMap;
 
-public class PlayerLeave implements Listener {
+public class EEPlayerLeave implements Listener {
 	@EventHandler
-	public void onPlayerLeave(PlayerQuitEvent event){
+	public void EEonPlayerLeave(PlayerQuitEvent event){
 		try{
 			toggleMap.ee.remove(event.getPlayer().getName());
 		}catch(Exception e){

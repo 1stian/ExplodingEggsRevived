@@ -18,7 +18,6 @@ public class Egg implements Listener {
 				if (event.getSpawnReason() == SpawnReason.EGG) {
 					event.setCancelled(false);
 				}
-
 			}
 		}
 	}

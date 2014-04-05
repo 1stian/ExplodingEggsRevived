@@ -19,7 +19,7 @@ public class ExplodingEggs extends JavaPlugin {
 		//pm.registerEvents(new Egg(), this);
 		pm.registerEvents(new Explode(), this);
 		pm.registerEvents(new PlayerJoin(), this);
-		//pm.registerEvents(new PlayerLeave(), this);
+		pm.registerEvents(new EEPlayerLeave(), this);
 		pm.registerEvents(new WorldChange(), this);
 		
 		ExplodingEggs.pluginST = this;
