@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ExplodingEggsRevived</groupId>
 	<artifactId>ExplodingEggsRevived</artifactId>
-	<version>0.0.1-SNAPSHOT-${buildNumber}}</version>
+	<version>0.0.1-SNAPSHOT-${BUILD_NUMBER}</version>
 
 	<repositories>
 		<repository>
