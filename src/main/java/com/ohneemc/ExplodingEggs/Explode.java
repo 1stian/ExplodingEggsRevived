@@ -1,8 +1,8 @@
-package com.ohneemc;
+package com.ohneemc.ExplodingEggs;
 
 import java.util.Random;
 
-import com.ohneemc.Commands.resources.toggleMap;
+import com.ohneemc.ExplodingEggs.Commands.resources.toggleMap;
 import org.bukkit.entity.Egg;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;

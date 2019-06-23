@@ -1,8 +1,8 @@
-package com.ohneemc.Commands;
+package com.ohneemc.ExplodingEggs.Commands;
 
 import java.util.regex.Pattern;
 
-import com.ohneemc.ExplodingEggs;
+import com.ohneemc.ExplodingEggs.ExplodingEggs;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

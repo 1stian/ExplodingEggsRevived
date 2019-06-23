@@ -1,4 +1,4 @@
-package com.ohneemc.Commands.resources;
+package com.ohneemc.ExplodingEggs.Commands.resources;
 
 import java.util.HashMap;
 

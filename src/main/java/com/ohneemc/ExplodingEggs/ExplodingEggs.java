@@ -1,4 +1,4 @@
-package com.ohneemc;
+package com.ohneemc.ExplodingEggs;
 
 import java.util.logging.Logger;
 
@@ -6,8 +6,8 @@ import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.ohneemc.Commands.Admin;
-import com.ohneemc.Commands.ee;
+import com.ohneemc.ExplodingEggs.Commands.Admin;
+import com.ohneemc.ExplodingEggs.Commands.ee;
 
 public class ExplodingEggs extends JavaPlugin {
 	public static ExplodingEggs pluginST;

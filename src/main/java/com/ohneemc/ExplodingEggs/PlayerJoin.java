@@ -1,6 +1,6 @@
-package com.ohneemc;
+package com.ohneemc.ExplodingEggs;
 
-import com.ohneemc.Commands.resources.toggleMap;
+import com.ohneemc.ExplodingEggs.Commands.resources.toggleMap;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

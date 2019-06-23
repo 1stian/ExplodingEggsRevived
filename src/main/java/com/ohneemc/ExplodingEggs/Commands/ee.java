@@ -1,15 +1,15 @@
-package com.ohneemc.Commands;
+package com.ohneemc.ExplodingEggs.Commands;
 
 import java.util.List;
 
-import com.ohneemc.ExplodingEggs;
+import com.ohneemc.ExplodingEggs.ExplodingEggs;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.ohneemc.Commands.resources.toggle;
+import com.ohneemc.ExplodingEggs.Commands.resources.toggle;
 
 public class ee implements CommandExecutor {
 	

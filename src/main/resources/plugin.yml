@@ -1,0 +1,15 @@
+name: ExplodingEggs
+main: com.ohneemc.ExplodingEggs.ExplodingEggs
+version: 2.3
+author: Stian "1stian" Tofte
+website: ohneemc.com
+
+commands:
+   ee:
+      description: Toggle explosion.
+      permission: ExplodingEggs.ee
+      usage: /ee
+   explodingeggs:
+      description: ExplodingEggs admin commands.
+      permission: ExplodingEggs.admin
+      usage: /explodingeggs
