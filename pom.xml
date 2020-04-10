@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ExplodingEggsRevived</groupId>
 	<artifactId>ExplodingEggs</artifactId>
-	<version>0.0.1-SNAPSHOT-${BUILD_NUMBER}</version>
+	<version>1.0.${BUILD_NUMBER}</version>
 
 	<repositories>
 		<repository>
@@ -23,14 +23,14 @@
 		<dependency>
 			<groupId>org.bstats</groupId>
 			<artifactId>bstats-bukkit</artifactId>
-			<version>1.5</version>
+			<version>1.7</version>
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.14.2-R0.1-SNAPSHOT</version>
+			<version>1.15.2-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
@@ -55,7 +55,7 @@
 					<relocations>
 						<relocation>
 							<pattern>org.bstats</pattern>
-							<shadedPattern>pro.homiecraft</shadedPattern>
+							<shadedPattern>com.ohneemc</shadedPattern>
 						</relocation>
 					</relocations>
 				</configuration>

@@ -1,6 +1,6 @@
 name: ExplodingEggs
 main: com.ohneemc.ExplodingEggs.ExplodingEggs
-version: 2.3
+version: ${project.version}
 author: Stian "1stian" Tofte
 website: ohneemc.com
 

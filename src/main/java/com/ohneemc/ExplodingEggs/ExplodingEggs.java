@@ -14,7 +14,7 @@ public class ExplodingEggs extends JavaPlugin {
 	public Logger log = Logger.getLogger("Minecraft");
 
 	public void onEnable() {
-		Metrics metrics = new Metrics(this);
+		Metrics metrics = new Metrics(this, 4983);
 		
 		PluginManager pm = getServer().getPluginManager();
 		//pm.registerEvents(new Egg(), this);
@@ -49,13 +49,13 @@ public class ExplodingEggs extends JavaPlugin {
 //	public void initMetrics(){
 //		try {
 //		    Metrics metrics = new Metrics(this);
-//		    
+//
 //		    Graph randomGraph = metrics.createGraph("Random Explode");
 //		    Graph enabledGraph = metrics.createGraph("Enabled by Default");
 //		    Graph blockDMG = metrics.createGraph("Block DMG");
-//		    
+//
 //		    randomGraph.addPlotter(new Metrics.Plotter("Enabled") {
-//				
+//
 //				@Override
 //				public int getValue() {
 //					int i = 0;
@@ -66,9 +66,9 @@ public class ExplodingEggs extends JavaPlugin {
 //					return i;
 //				}
 //			});
-//		    
+//
 //		    randomGraph.addPlotter(new Metrics.Plotter("Disabled") {
-//				
+//
 //				@Override
 //				public int getValue() {
 //					int i = 0;
@@ -79,9 +79,9 @@ public class ExplodingEggs extends JavaPlugin {
 //					return i;
 //				}
 //			});
-//		    
+//
 //		    enabledGraph.addPlotter(new Metrics.Plotter("Enabled") {
-//				
+//
 //				@Override
 //				public int getValue() {
 //					int i = 0;
@@ -92,9 +92,9 @@ public class ExplodingEggs extends JavaPlugin {
 //					return i;
 //				}
 //			});
-//		    
+//
 //		    enabledGraph.addPlotter(new Metrics.Plotter("Disabled") {
-//				
+//
 //				@Override
 //				public int getValue() {
 //					int i = 0;
@@ -105,9 +105,9 @@ public class ExplodingEggs extends JavaPlugin {
 //					return i;
 //				}
 //			});
-//		    
+//
 //		    blockDMG.addPlotter(new Metrics.Plotter("Enabled") {
-//				
+//
 //				@Override
 //				public int getValue() {
 //					int i = 0;
@@ -118,9 +118,9 @@ public class ExplodingEggs extends JavaPlugin {
 //					return i;
 //				}
 //			});
-//		    
+//
 //		    blockDMG.addPlotter(new Metrics.Plotter("Disabled") {
-//				
+//
 //				@Override
 //				public int getValue() {
 //					int i = 0;
@@ -131,7 +131,7 @@ public class ExplodingEggs extends JavaPlugin {
 //					return i;
 //				}
 //			});
-//		    
+//
 //		    metrics.start();
 //		} catch (IOException e) {
 //		    // Failed to submit the stats :-(

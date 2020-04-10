@@ -20,7 +20,7 @@ public class Explode implements Listener {
 		int exRad = ExplodingEggs.pluginST.getConfig().getInt("ExplodingEggs.Explosion.Explosion-radius", 2);
 		int chance = ExplodingEggs.pluginST.getConfig().getInt("ExplodingEggs.Explosion.Chance-For-Explosion", 40);
 		
-		if (randomEx == true){
+		if (randomEx){
 			event.setHatching(false);
 			Random gen = new Random();
 			int r = gen.nextInt(100);
@@ -28,24 +28,24 @@ public class Explode implements Listener {
 				if (toggleMap.ee.containsKey(event.getPlayer())){
 					if (toggleMap.ee.containsValue(true)){
 						
-						if (blockDmg == true){
+						if (blockDmg){
 							egg.getWorld().createExplosion(egg.getLocation(), exRad, false);
 						}
-						else if (blockDmg == false){
+						else {
 							egg.getWorld().createExplosion(egg.getLocation().getX(), egg.getLocation().getY(), egg.getLocation().getZ(), exRad, false, false);
 						}
 					}
 				}
 			}
 		}
-		else if(randomEx == false){
+		else{
 			event.setHatching(false);
 			if (toggleMap.ee.containsKey(event.getPlayer())){
 					
-				if (blockDmg == true){
+				if (blockDmg){
 					egg.getWorld().createExplosion(egg.getLocation(), exRad, false);
 				}
-				else if (blockDmg == false){
+				else{
 					egg.getWorld().createExplosion(egg.getLocation().getX(), egg.getLocation().getY(), egg.getLocation().getZ(), exRad, false, false);
 				}
 			}

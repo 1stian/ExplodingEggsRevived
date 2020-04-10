@@ -11,7 +11,7 @@ public class PlayerJoin implements Listener {
 	public void onPlayerJoin(PlayerJoinEvent event){
 		Player player = event.getPlayer();
 		boolean enabledDef = ExplodingEggs.pluginST.getConfig().getBoolean("ExplodingEggs.Explosion.Enabled-By-Default", false);
-		if (enabledDef == true){
+		if (enabledDef){
 			if(player.hasPermission("ExplodingEggs.ee")){
 				toggleMap.ee.put(player, true);
 			}
